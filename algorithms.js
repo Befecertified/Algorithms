@@ -89,3 +89,21 @@ const capitalize = stringToCapitalize => {
 	let capitalizedString = stringToCapitalize.replace(stringToCapitalize[0], firstLetter);
 	return capitalizedString;
 }
+
+//10. write a function to reverse a given array in a new array
+function reverseArray(x){
+	var y = [];
+	for( i = 0; i < x.length; i++){
+		y.unshift(x[i]);
+	} 
+	return y;
+}
+//11. write a function to reverse a given array in the same array
+function reverseArrayInPlace(x){
+	var size = x;
+	x = [];
+	for( i = 0; i < size.length; i++){
+		x.unshift(size[i]);
+	} 
+	return x;
+}
