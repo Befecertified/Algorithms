@@ -1,9 +1,17 @@
-//1. write a function to store the range of values to be computed in an array
-function range(x, y){
+//1. write a function to store the range of values with a given number of steps to be computed in an array
+function range(x, y, z = 1){
 	let numbersInRange = [];
-	for (let i = x; i <= y; i++){
-		numbersInRange.push(i);
-	} 
+	//pre-es6 method for default values below
+	// z === undefined ? z = 1 : z = z;
+	if (x < y){
+		for (let i = x; i <= y; i+=z){
+			numbersInRange.push(i);
+		}
+	} else {
+		for (let i = x; i >= y; i+=z){
+			numbersInRange.push(i);
+		}
+	}
 	return numbersInRange;
 }
 
